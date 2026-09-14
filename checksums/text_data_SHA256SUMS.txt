@@ -1,0 +1,2 @@
+7bbf614852e1157aff4ff43efa38004e4a14af2c79e55e642ddfdf193bb2d24a  cmce_text_unified.zip
+d27296fe10a5ecbb86cb67eda7f691d4d4295842ef018769286d1675b267227c  cmce_text_promptA_features.zip

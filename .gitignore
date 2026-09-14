@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# datasets, text features, weights and run outputs are distributed separately
+data/*
+!data/README.md
+!data/splits/
+weights/
+checkpoints/
+logs/
+results/
+visualizations/

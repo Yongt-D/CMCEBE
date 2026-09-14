@@ -1,0 +1,12 @@
+# Tested with Python 3.10/3.11 and PyTorch 2.4.0, 2.6.0, 2.7.1 and 2.8.0 (CUDA 11.8-12.8).
+torch>=2.4
+torchvision
+numpy
+pyyaml
+pillow
+opencv-python
+tqdm
+# experiments/convergence_trace.py
+matplotlib
+# p-values and confidence intervals in experiments/fixed_random_control/summarize_nonsemantic_capacity.py
+scipy

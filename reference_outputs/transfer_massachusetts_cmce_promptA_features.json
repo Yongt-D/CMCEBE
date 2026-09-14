@@ -1,0 +1,319 @@
+{
+  "dataset": "massachusetts",
+  "split": "test",
+  "text_dir": "text_features",
+  "config": "cmce_v5_canonical_mass.yaml",
+  "grid": [
+    0.05,
+    0.06,
+    0.07,
+    0.08,
+    0.09,
+    0.1,
+    0.11,
+    0.12,
+    0.13,
+    0.14,
+    0.15,
+    0.16,
+    0.17,
+    0.18,
+    0.19,
+    0.2,
+    0.21,
+    0.22,
+    0.23,
+    0.24,
+    0.25,
+    0.26,
+    0.27,
+    0.28,
+    0.29,
+    0.3,
+    0.31,
+    0.32,
+    0.33,
+    0.34,
+    0.35,
+    0.36,
+    0.37,
+    0.38,
+    0.39,
+    0.4,
+    0.41,
+    0.42,
+    0.43,
+    0.44,
+    0.45,
+    0.46,
+    0.47,
+    0.48,
+    0.49,
+    0.5,
+    0.51,
+    0.52,
+    0.53,
+    0.54,
+    0.55,
+    0.56,
+    0.57,
+    0.58,
+    0.59,
+    0.6,
+    0.61,
+    0.62,
+    0.63,
+    0.64,
+    0.65,
+    0.66,
+    0.67,
+    0.68,
+    0.69,
+    0.7,
+    0.71,
+    0.72,
+    0.73,
+    0.74,
+    0.75,
+    0.76,
+    0.77,
+    0.78,
+    0.79,
+    0.8,
+    0.81,
+    0.82,
+    0.83,
+    0.84,
+    0.85,
+    0.86,
+    0.87,
+    0.88,
+    0.89,
+    0.9,
+    0.91,
+    0.92,
+    0.93,
+    0.94,
+    0.95
+  ],
+  "metric": "global pixel-pooled tp/fp/fn over the split",
+  "protocols": {
+    "source": "threshold selected on WHU validation (checkpoint best_threshold); no target labels",
+    "window": "best IoU within [source-0.15, source+0.15] on the target split; uses target labels",
+    "oracle": "best IoU over the full 0.05-0.95 grid; uses target labels",
+    "fixed05": "fixed threshold 0.5"
+  },
+  "runs": [
+    {
+      "checkpoint": "cmce_whu_seed0.pth",
+      "alignment": "cmce",
+      "seed": 0,
+      "source_threshold": 0.6,
+      "n_images": 40,
+      "source": {
+        "threshold": 0.6,
+        "iou": 0.31105817893228355,
+        "precision": 0.8581165482936526,
+        "recall": 0.3279237055418078
+      },
+      "window": {
+        "threshold": 0.45,
+        "iou": 0.3307186793937769,
+        "precision": 0.8423775286043684,
+        "recall": 0.3525345083342981
+      },
+      "oracle": {
+        "threshold": 0.05,
+        "iou": 0.416276118379306,
+        "precision": 0.7553672700835018,
+        "recall": 0.48114110904593715
+      },
+      "fixed05": {
+        "threshold": 0.5,
+        "iou": 0.3242400351451186,
+        "precision": 0.8475705802249021,
+        "recall": 0.34431798026367944
+      }
+    },
+    {
+      "checkpoint": "cmce_whu_seed42.pth",
+      "alignment": "cmce",
+      "seed": 42,
+      "source_threshold": 0.6,
+      "n_images": 40,
+      "source": {
+        "threshold": 0.6,
+        "iou": 0.30172637321466594,
+        "precision": 0.8463311075627813,
+        "recall": 0.3192144253192481
+      },
+      "window": {
+        "threshold": 0.45,
+        "iou": 0.3196741110920926,
+        "precision": 0.83097119554897,
+        "recall": 0.3419066884831161
+      },
+      "oracle": {
+        "threshold": 0.05,
+        "iou": 0.3942795526494049,
+        "precision": 0.7459207720480064,
+        "recall": 0.4554467077711691
+      },
+      "fixed05": {
+        "threshold": 0.5,
+        "iou": 0.3137760700761935,
+        "precision": 0.8363228315675034,
+        "recall": 0.33430553028743304
+      }
+    },
+    {
+      "checkpoint": "cmce_whu_seed123.pth",
+      "alignment": "cmce",
+      "seed": 123,
+      "source_threshold": 0.58,
+      "n_images": 40,
+      "source": {
+        "threshold": 0.58,
+        "iou": 0.33381317626718826,
+        "precision": 0.8018681274479735,
+        "recall": 0.3638216123146975
+      },
+      "window": {
+        "threshold": 0.43,
+        "iou": 0.35361530280376713,
+        "precision": 0.7810865040436344,
+        "recall": 0.3925164407553936
+      },
+      "oracle": {
+        "threshold": 0.05,
+        "iou": 0.4275080187191677,
+        "precision": 0.6741356343604383,
+        "recall": 0.5388638298818821
+      },
+      "fixed05": {
+        "threshold": 0.5,
+        "iou": 0.3444176311253386,
+        "precision": 0.7909852118804998,
+        "recall": 0.37890188129805974
+      }
+    },
+    {
+      "checkpoint": "cmce_whu_seed456.pth",
+      "alignment": "cmce",
+      "seed": 456,
+      "source_threshold": 0.6,
+      "n_images": 40,
+      "source": {
+        "threshold": 0.6,
+        "iou": 0.2990807584633729,
+        "precision": 0.8492259425774518,
+        "recall": 0.3158524184492337
+      },
+      "window": {
+        "threshold": 0.45,
+        "iou": 0.3193125497383204,
+        "precision": 0.8314066045780408,
+        "recall": 0.3414196394810818
+      },
+      "oracle": {
+        "threshold": 0.05,
+        "iou": 0.40326428677503295,
+        "precision": 0.7301347546895265,
+        "recall": 0.47389924929437777
+      },
+      "fixed05": {
+        "threshold": 0.5,
+        "iou": 0.31259318388196755,
+        "precision": 0.8375313632161866,
+        "recall": 0.3327719532775147
+      }
+    },
+    {
+      "checkpoint": "cmce_whu_seed666.pth",
+      "alignment": "cmce",
+      "seed": 666,
+      "source_threshold": 0.54,
+      "n_images": 40,
+      "source": {
+        "threshold": 0.54,
+        "iou": 0.2789214970820363,
+        "precision": 0.860837980751453,
+        "recall": 0.29209195530783605
+      },
+      "window": {
+        "threshold": 0.39,
+        "iou": 0.29655293631769014,
+        "precision": 0.8444443762099888,
+        "recall": 0.3136892136896129
+      },
+      "oracle": {
+        "threshold": 0.05,
+        "iou": 0.3733426413452399,
+        "precision": 0.7646307183832887,
+        "recall": 0.4218192249761466
+      },
+      "fixed05": {
+        "threshold": 0.5,
+        "iou": 0.2835317956128247,
+        "precision": 0.8565597849455306,
+        "recall": 0.29766507339668774
+      }
+    }
+  ],
+  "summary": {
+    "cmce": {
+      "n": 5,
+      "seeds": [
+        0,
+        42,
+        123,
+        456,
+        666
+      ],
+      "source": {
+        "iou_percent": [
+          31.1058,
+          30.1726,
+          33.3813,
+          29.9081,
+          27.8921
+        ],
+        "mean": 30.491999679190933,
+        "std_sample": 1.9954391892224694
+      },
+      "window": {
+        "iou_percent": [
+          33.0719,
+          31.9674,
+          35.3615,
+          31.9313,
+          29.6553
+        ],
+        "mean": 32.39747158691294,
+        "std_sample": 2.071370576513809
+      },
+      "oracle": {
+        "iou_percent": [
+          41.6276,
+          39.428,
+          42.7508,
+          40.3264,
+          37.3343
+        ],
+        "mean": 40.293412357363025,
+        "std_sample": 2.081196515296968
+      },
+      "fixed05": {
+        "iou_percent": [
+          32.424,
+          31.3776,
+          34.4418,
+          31.2593,
+          28.3532
+        ],
+        "mean": 31.57117431682886,
+        "std_sample": 2.2055504043542826
+      }
+    }
+  }
+}

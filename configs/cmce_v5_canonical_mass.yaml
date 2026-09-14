@@ -1,0 +1,125 @@
+data:
+  dataset: massachusetts
+  root_dir: data
+  image_size: 512
+  num_workers: 4
+  load_text_features: true
+datasets:
+  massachusetts:
+    root_dir: data/massachusetts
+    train_samples: -1
+    description: WHU Building数据集
+model:
+  backbone:
+    name: unet
+    in_channels: 3
+    base_channels: 64
+    bilinear: true
+    dropout: 0.1
+  segmentation_head:
+    num_classes: 1
+  simple:
+    image_channels: 512
+    text_dim: 2048
+    output_dim: 512
+    dropout: 0.1
+  dynamic:
+    image_channels: 512
+    text_dim: 2048
+    embed_dim: 256
+    num_attention_heads: 8
+    dropout: 0.1
+    use_layer_norm: true
+  generative:
+    image_channels: 512
+    text_dim: 2048
+    latent_dim: 256
+    hidden_dim: 384
+    num_layers: 3
+    dropout: 0.1
+    use_vae: true
+  cmce:
+    scale_channels:
+    - 256
+    - 512
+    - 512
+    - 512
+    feature_keys:
+    - encoder_2
+    - encoder_3
+    - encoder_4
+    - bottleneck
+    hidden_dim: 256
+    num_heads: 4
+    num_anchors: 3
+    dropout: 0.1
+    max_iterations: 3
+    convergence_threshold: 0.01
+    use_deformable: true
+    residual_scale: 0.08
+    confidence_baseline: 0.65
+    learnable_fusion: true
+    learnable_affinity: true
+    coherence_loss_weight: 0.1
+    refinement_loss_weight: 0.05
+    convergence_loss_weight: 0.02
+  daca:
+    scale_channels:
+    - 256
+    - 512
+    - 512
+    - 512
+    feature_keys:
+    - encoder_2
+    - encoder_3
+    - encoder_4
+    - bottleneck
+    hidden_dim: 256
+    num_heads: 4
+    max_anchors: 5
+    dropout: 0.1
+    temperature: 0.07
+    contrastive_weight: 0.1
+    complexity_reg_weight: 0.02
+  attn_gate_alpha: 0.6
+  attn_gate_beta: 0.4
+training:
+  learning_rate: 0.0001
+  weight_decay: 0.00025
+  num_epochs: 100
+  batch_size: 2
+  val_batch_size: 2
+  injection_warmup_epochs: 10
+  scheduler_type: cosine_warmup
+  warmup_epochs: 5
+  scheduler_t0: 30
+  scheduler_tmult: 1
+  min_lr: 1.0e-06
+augmentation:
+  horizontal_flip: 0.5
+  vertical_flip: 0.2
+  rotation_degrees: 12
+  color_jitter:
+    brightness: 0.11
+    contrast: 0.11
+    saturation: 0.09
+    hue: 0.035
+  gaussian_blur: 0.06
+metrics:
+  primary_metric: iou
+  compute_metrics:
+  - iou
+  - f1
+  - precision
+  - recall
+  binary_threshold: 0.5
+experiment:
+  name: mass_cross_domain_cleaned
+  version: v2.0
+  description: 清理后的WHU数据集训练，专注于跨域泛化评估
+  random_seed: 42
+  save_model_weights: true
+logging:
+  level: INFO
+  save_logs: true
+  log_frequency: 50
