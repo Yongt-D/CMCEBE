@@ -76,15 +76,17 @@ with Python 3.10 and 3.11 and PyTorch 2.4.0 to 2.8.0.
 
 ## Downloads
 
-The trained weights and the text data are hosted on Google Drive.
+The trained weights and the text data are in one
+[Google Drive folder](https://drive.google.com/drive/folders/1yokgX_-oA4fYk0evHvODxtzd0CfPb-Rf).
 
-| Item | Files | Size | Link |
-|---|---|---|---|
-| Trained weights | 15 files, `{cmce,none,simple}_whu_seed{0,42,123,456,666}.pth` | 1.15 GB | *link to be added* |
-| Text data: unified descriptions and embeddings | `cmce_text_unified.zip` | 227 MB | *link to be added* |
-| Text data: Prompt-A embeddings | `cmce_text_promptA_features.zip` | 96 MB | *link to be added* |
+| Item | Files | Size |
+|---|---|---|
+| Trained weights | 15 files, `{cmce,none,simple}_whu_seed{0,42,123,456,666}.pth` | 1.15 GB |
+| Text data: unified descriptions and embeddings | `cmce_text_unified.zip` | 227 MB |
+| Text data: Prompt-A embeddings | `cmce_text_promptA_features.zip` | 96 MB |
 
-Check the downloads against the checksums published in this repository:
+Download single files or the whole folder, then check them against the checksums published in this
+repository:
 
     python tools/verify_downloads.py --sums checksums/weights_SHA256SUMS.txt --dir weights
     python tools/verify_downloads.py --sums checksums/text_data_SHA256SUMS.txt --dir <folder with the two zip files>

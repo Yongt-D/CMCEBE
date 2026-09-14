@@ -52,7 +52,7 @@ Native ground sample distances are kept; nothing is resampled to a common resolu
 | `cmce_text_unified.zip` | 227 MB | `unified_janus_texts/` and `unified_janus_features/` for every split of the three datasets |
 | `cmce_text_promptA_features.zip` | 96 MB | Prompt-A `text_features/` for WHU train/val/test, Inria test and Massachusetts train/val/test |
 
-Download both archives from the Google Drive links in the [main README](../README.md#downloads)
+Download both archives from the Google Drive folder linked in the [main README](../README.md#downloads)
 and unzip them into `data/`; paths inside start with `<dataset>/<split>/`.
 `checksums/text_data_SHA256SUMS.txt` lists the archive checksums, and each archive carries
 `MANIFEST.json` with the SHA-256 of every file. [docs/TEXT_PIPELINE.md](../docs/TEXT_PIPELINE.md) explains how the descriptions and
