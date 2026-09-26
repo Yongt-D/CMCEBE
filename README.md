@@ -3,8 +3,9 @@
 Code, trained weights and text data for
 
 > Yongtao Deng, Dajiang Lei, Liping Zhang, Jiaxin Li, Yidong Peng, and Weisheng Li.
-> **Text-Conditioned Cross-Domain Generalization in Remote Sensing Building Extraction: A Mechanistic Evaluation of Semantic Anchor Refinement.**
-> *Expert Systems with Applications*, 2026 (accepted; DOI to be added).
+> **Text-conditioned cross-domain generalization in remote sensing building extraction: A mechanistic evaluation of semantic anchor refinement.**
+> *Expert Systems with Applications* 334 (2027) 134437.
+> https://doi.org/10.1016/j.eswa.2026.134437
 
 CMCE attaches a text-conditioned refinement branch to a U-Net. Each image comes with a
 Janus-Pro-1B description embedding, which is decomposed into semantic anchors (SAD) and used by a
@@ -185,13 +186,15 @@ that produced the paper's results.
 
 ## Citation
 
-    @article{deng2026textconditioned,
-      title   = {Text-Conditioned Cross-Domain Generalization in Remote Sensing Building Extraction:
-                 A Mechanistic Evaluation of Semantic Anchor Refinement},
+    @article{deng2027textconditioned,
+      title   = {Text-conditioned cross-domain generalization in remote sensing building extraction:
+                 A mechanistic evaluation of semantic anchor refinement},
       author  = {Deng, Yongtao and Lei, Dajiang and Zhang, Liping and Li, Jiaxin and Peng, Yidong and Li, Weisheng},
       journal = {Expert Systems with Applications},
-      year    = {2026},
-      note    = {Accepted. Volume, pages and DOI to be added.}
+      volume  = {334},
+      pages   = {134437},
+      year    = {2027},
+      doi     = {10.1016/j.eswa.2026.134437}
     }
 
 ## License
